@@ -1,17 +1,13 @@
 <!doctype html>
-<html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">   <!-- loaded bootstrap manually because it didnt work when i tried the CDN-->
-  <link rel="stylesheet" href="css/bootstrap-reboot.css">
-  <script src="js/jquery-3.3.1.js"></script>              <!-- jquery too-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- google CDN for jquery-->
   <script src="scripts.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="modal">                                        <!-- model is outside the wrapper so that it covers the page when it's popped up-->
+      <div id="elem-desc"></div>
   </div>
   <div id="wrap">                                         <!-- page wrapper for content outside the flexbox-->
     <div id="elm-container">                              <!-- main flexbox that contains the lanthanide and actinide flex boxes-->
@@ -130,8 +126,13 @@
           </div>
           <div class="actel">
               <div class="atnum">96</div>
-              <div class="atname">La</div>
+              <div class="atname">Cm</div>
               <div class="atwei">247</div>
+          </div>
+          <div class="actel">
+              <div class="atnum">97</div>
+              <div class="atname">Bk</div>
+              <div class="atwei">248</div>
           </div>
           <div class="actel">
               <div class="atnum">98</div>
@@ -162,11 +163,6 @@
               <div class="atnum">103</div>
               <div class="atname">Lr</div>
               <div class="atwei">266</div>
-          </div>
-          <div class="actel">
-              <div class="atnum">57</div>
-              <div class="atname">La</div>
-              <div class="atwei">138.91</div>
           </div>
       </div>
     </div>
