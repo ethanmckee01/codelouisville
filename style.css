@@ -1,18 +1,130 @@
-#elm_container
-{
     
-}
+    /* MODAL */
+    #modal
+    {
+        width: 100%; 
+        min-height: 100%;
+        visibility: hidden;
+        background-color: black;
+        position: fixed;
+    }
+    #elm-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-#wrap
+    }
+    #lan
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #act
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .lanel, .actel
+    {
+        flex-shrink: 0;
+        list-style-type: none;
+        height: 80px;
+        width: 80px;
+        border-style: solid;
+        border-width: 3px 3px 3px 3px;
+    }
+
+    .lanel
+    {
+        border-color: black;
+        border-width: 3px 0px 0px 3px;
+    }
+    .actel
+    {
+        border-width: 3px 3px 0px 3px;
+    }
+
+    .actel:last-child
+    {       
+        border-width: 3px 3px 3px 3px;
+    }
+
+    .lanel:last-child
+    {
+        border-width: 3px 0px 3px 3px;
+    }
+
+@media screen and (min-width: 1200px)
 {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    min-height: 100%;
+    #elm-container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #lan, #act
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    .lanel, .actel
+    {
+        flex-shrink: 0;
+        list-style-type: none;
+        height: 80px;
+        width: 80px;
+        border-style: solid;
+        border-width: 3px 0px 3px 3px;
+    }
+
+    .lanel
+    {
+        border-width: 3px 0px 0px 3px;
+    }
+
+    .actel:last-child
+    {       
+        border-width: 3px 3px 3px 3px;
+    }
+
+    .lanel:last-child
+    {
+        border-width: 3px 3px 0px 3px;
+    }
 }
 
-.elm
-{
+    .lanel
+    {
+        background-color: lightslategray;
+        color: black;
+    }
 
-}
+    .actel
+    {
+        background-color: cornflowerblue;
+        color: white;
+        border-color: black;
+    }
 
+    .atnum, .atwei, .atname
+    {
+        line-height: 25px;
+        text-align: center;
+        vertical-align: middle;
+    }
 
+    .atname
+    {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    #wrap
+    {
+        margin: 0 auto; 
+        height: 100%;
+    }
