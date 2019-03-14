@@ -1,27 +1,24 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">   <!-- loaded bootstrap manually because it didnt work when i tried the CDN-->
   <link rel="stylesheet" href="css/bootstrap-reboot.css">
-  <script src="js/jquery-3.3.1.js"></script> 
+  <script src="js/jquery-3.3.1.js"></script>              <!-- jquery too-->
   <script src="scripts.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div id="modal">
-    
+  <div id="modal">                                        <!-- model is outside the wrapper so that it covers the page when it's popped up-->
   </div>
-  <div id="wrap">
-    <div id="elm-container">
-      <div id="lan">
+  <div id="wrap">                                         <!-- page wrapper for content outside the flexbox-->
+    <div id="elm-container">                              <!-- main flexbox that contains the lanthanide and actinide flex boxes-->
+      <div id="lan">                                      <!-- lanthanide flexbox-->
           <div class="lanel">
             <div id="ass" class="atnum">57</div>
-            <div class="atname">La</div>
+            <div class="atname">La</div>                  <!-- first lanthanide element, lanthanum-->
             <div class="atwei">138.91</div>
           </div>
           <div class="lanel">
@@ -94,12 +91,11 @@
               <div class="atname">Lu</div>
               <div class="atwei">174.97</div>
           </div>
-
       </div>
-      <div id="act">
+      <div id="act">                          <!-- beginning of actinides -->
           <div class="actel">
               <div class="atnum">89</div>
-              <div class="atname">Ac</div>
+              <div class="atname">Ac</div>    <!-- first actinide, actinium -->
               <div class="atwei">227</div>
           </div>
           <div class="actel">
@@ -173,11 +169,7 @@
               <div class="atwei">138.91</div>
           </div>
       </div>
-      
     </div>
-
-      
-        
   </div>
 </body>
 </html>
