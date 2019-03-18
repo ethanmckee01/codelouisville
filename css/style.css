@@ -22,11 +22,11 @@
         background-color: white;
         border-width: 3px;
         border-color: black;
-        min-width: 50%;
-        min-height: 50%;
+        min-width: 75%;
+        min-height: 60%;
         flex-shrink: 0;
         text-align: left;
-        font-size: 1.3em;
+        font-size: .8em;
         cursor:auto;
     }
  @media screen and (min-width: 1200px)
@@ -41,7 +41,7 @@
             min-width: 400px;
             min-height: 500px;
             text-align: center;
-            font-size: 1.3em;
+            font-size: 1.5em;
         } 
     }
     /* Modal END*/
