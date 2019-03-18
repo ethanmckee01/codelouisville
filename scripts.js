@@ -98,7 +98,7 @@ $( document ).ready(function()
             desc = "This is Lutetium.";
              }
         $('#modal').css('visibility','visible');    //modal appears on click
-        $('#elem-desc').css('background-color','lightslategray').css('color','black');
+        $('#elem-desc').css('background-color','gainsboro').css('color','black');
         $('#elem-desc').text(desc);
     });
 

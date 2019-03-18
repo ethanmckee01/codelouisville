@@ -27,8 +27,8 @@
         flex-shrink: 0;
         text-align: left;
         font-size: 1.3em;
+        cursor:auto;
     }
-
  @media screen and (min-width: 1200px)
     {
         #elem-desc
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        visibility: visible;
+        width: 100%;
 
     }
     #lan
@@ -96,9 +96,9 @@
     {
         border-width: 3px 0px 3px 3px;
     }
-    .lanel:active, .actel:active
+    .lanel:hover, .actel:hover, #modal 
     {
-        z-index: 0;
+        cursor:pointer;
     }
 
 @media screen and (min-width: 1200px)    /* first and maybe only break point. I don't let the flex tables wrap because to make sense the elements need to be grouped into either exactly 2 columns or exactly
@@ -143,7 +143,7 @@
 
     .lanel
     {
-        background-color: lightslategray;
+        background-color: gainsboro;
         color: black;
     }
 
@@ -169,7 +169,7 @@
 
     #wrap
     {
-        margin: 0; 
-        height: 100%;
-        min-width: 1200px;
+        max-width: 1200px; 
+        margin: 0 auto; 
+        min-height: 100%;
     }
