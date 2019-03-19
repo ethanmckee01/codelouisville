@@ -105,20 +105,20 @@ $( document ).ready(function() //get the DOM ready
         console.log(atomicNumber);
         if(atomicNumber >= 57 && atomicNumber <= 71)        //this checks what type of element was clicked and changes the modal background
                 {
-                 $('#elem-desc').css('background-color','gainsboro').css('color','black');   //gainsboro for lanthanides
+                 $('#modal-desc').css('background-color','gainsboro').css('color','black');   //gainsboro for lanthanides
                 }
                 else
                 {
-                 $('#elem-desc').css('background-color','cornflowerblue').css('color','white');  //cornflower blue for actinides
+                 $('#modal-desc').css('background-color','cornflowerblue').css('color','white');  //cornflower blue for actinides
                 }
-        $('#elem-desc').text(desc);  //puts in the description for the element
+        $('#modal-desc').text(desc);  //puts in the description for the element
     }      
     );
     $("#modal").on("click",function(){               //Clicking the black space outside the modal closes it and brings back the description text
         $('#modal').css('visibility','hidden');
         $('.lanel').css('visibility','visible');
         $('.actel').css('visibility','visible');
-        $('#elm-container').css('visibility','visible');
+        $('#actlan-container').css('visibility','visible');
     }).children().on('click', function (event) {     //Two chained click events. Clicking the text/the modal itself does NOT close it, so
         event.stopPropagation();                     //the information can still be easily right clicked/selected.
     });
