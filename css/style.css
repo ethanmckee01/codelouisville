@@ -7,12 +7,13 @@
         width: 100%; 
         height: 100%;
         margin: 0;
-        visibility: visible;
+        visibility: hidden;
         background-color:rgba(0,0,0,0.7);  
         flex-direction: row;            
         position: fixed;
         justify-content: center;
         align-items: center;
+        z-index: 0;
     }
     #elem-desc
     {
@@ -26,15 +27,126 @@
         min-height: 60%;
         flex-shrink: 0;
         text-align: left;
-        font-size: 1.6em;
+        font-size: 1.0em;
         cursor:auto;
     }
-    @media screen and (min-width: 768px)
+    #lan
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #act
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .lanel
+    {
+        background-color: gainsboro;
+        color: black;
+        border-color: black;
+        border-width: 3px 0px 0px 3px;
+    }
+
+    .actel
+    {
+        background-color: cornflowerblue;       /* not a chuck palahniuk joke, actinium is blue so I made their bg color blue*/
+        color: white;
+        border-color: black;
+        border-width: 3px 3px 0px 3px;
+    }
+    .lanel, .actel
+    {
+        flex-shrink: 0;
+        list-style-type: none;
+        height: 70px;
+        width: 70px;
+        border-style: solid;
+    }
+    .actel:last-child
+    {       
+        border-width: 3px 3px 3px 3px;
+    }
+    .lanel:last-child
+    {
+        border-width: 3px 0px 3px 3px;
+    }
+    .lanel:hover, .actel:hover, #modal 
+    {
+        cursor:pointer;
+    }
+    .atnum, .atwei, .atname
+    {
+        line-height: 25px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .atname
+    {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    #wrap
+    {
+        max-width: 1200px; 
+        margin: 0 auto; 
+        min-height: 100%;
+    }
+    body 
+    {
+        margin: 0;       /* Getting rid of body's default margins so the modal translucence covers viewport completely*/
+        background-color: #393e41;
+        color: #d3d0cb;
+    }
+    #elm-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        width: 90%;
+        padding: 0 0 0 0;
+        justify-content: center;
+    }
+    #actlandesc
+    {
+        position: fixed;
+        padding: 40% 20% 0 0;
+        z-index: -1;               /*Makes sure description text never appears over the modal*/
+    }
+@media screen and (min-width: 200px)
+    {
+        #actlandesc
+        {
+            visibility: hidden;
+            font-size: 1.5em
+        }
+    }
+@media screen and (min-width: 600px)
     {
         #elem-desc
         {
-            font-size: 1.9em;
-        } 
+            font-size: 1.3em;
+        }
+        #actlandesc
+        {
+            visibility: visible;
+            position: fixed;
+            padding: 4% 3% 0 28%;
+        }
+        #elm-container
+        {
+            justify-content: left;
+        }
+    }
+
+@media screen and (min-width: 768px)
+    {
+        #actlandesc
+        {
+            visibility: visible;
+            position: fixed;
+            padding: 4% 3% 0 20%;
+        }
     }
  @media screen and (min-width: 1200px)
     {
@@ -48,139 +160,52 @@
             min-width: 400px;
             min-height: 500px;
             text-align: center;
-            font-size: 1.3em;
+            font-size: 1.8em;
         } 
-    }
-    /* Modal END*/
+        #elm-container
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 97%;
+            padding: 5% 2% 0 2%;
+        }
+        #lan, #act
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .lanel, .actel
+        {
+            flex-shrink: 0;
+            list-style-type: none;
+            height: 75px;
+            width: 75px;
+            border-style: solid;
+            border-width: 3px 0px 3px 3px;
+        }
+        .actel:last-child
+        {       
+            border-width: 3px 3px 3px 3px;
+        }
 
-    body 
-    {
-        margin: 0;       /* Getting rid of body's default margins so the modal translucence covers viewport completely*/
-        background-color: #393e41;
+        .lanel:last-child
+        {
+            border-width: 3px 3px 0px 3px;
+        }
+        .lanel
+        {
+            border-width: 3px 0px 0px 3px;
+        }
+        #actlandesc
+        {
+        position: fixed;
+        padding: 25% 7% 0 7%;
+        margin: auto;
+        }
     }
-    #elm-container
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-
-    }
-    #lan
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    #act
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    .lanel, .actel
-    {
-        flex-shrink: 0;
-        list-style-type: none;
-        height: 80px;
-        width: 80px;
-        border-style: solid;
-        border-width: 3px 3px 3px 3px;
-    }
-    .lanel
-    {
-        border-color: black;
-        border-width: 3px 0px 0px 3px;
-    }
-    .actel
-    {
-        border-width: 3px 3px 0px 3px;
-    }
-
-    .actel:last-child
-    {       
-        border-width: 3px 3px 3px 3px;
-    }
-
-    .lanel:last-child
-    {
-        border-width: 3px 0px 3px 3px;
-    }
-    .lanel:hover, .actel:hover, #modal 
-    {
-        cursor:pointer;
-    }
-
-@media screen and (min-width: 1200px)    /* first and maybe only break point. I don't let the flex tables wrap because to make sense the elements need to be grouped into either exactly 2 columns or exactly
-                                           two rows. they're color-coded, but it'd still be sloppy and I don't want the IUPAC mad at me.*/
-{
-    #elm-container
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    #lan, #act
-    {
-        display: flex;
-        flex-direction: row;
-    }
-    .lanel, .actel
-    {
-        flex-shrink: 0;
-        list-style-type: none;
-        height: 80px;
-        width: 80px;
-        border-style: solid;
-        border-width: 3px 0px 3px 3px;
-    }
-    .actel:last-child
-    {       
-        border-width: 3px 3px 3px 3px;
-    }
-
-    .lanel:last-child
-    {
-        border-width: 3px 3px 0px 3px;
-    }
-    .lanel
-    {
-        border-width: 3px 0px 0px 3px;
-    }
-}                                                  /* End of media query 1*/
-
-
-
-    .lanel
-    {
-        background-color: gainsboro;
-        color: black;
-    }
-
-    .actel
-    {
-        background-color: cornflowerblue;       /* not a chuck palahniuk joke, actinium is blue so I made their bg color blue*/
-        color: white;
-        border-color: black;
-    }
-
-    .atnum, .atwei, .atname
-    {
-        line-height: 25px;
-        text-align: center;
-        vertical-align: middle;
-    }
-
-    .atname
-    {
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    #wrap
-    {
-        max-width: 1200px; 
-        margin: 0 auto; 
-        min-height: 100%;
-        background-color: #393e41;
-    }
+                                              /* End of media query 1*/
+    

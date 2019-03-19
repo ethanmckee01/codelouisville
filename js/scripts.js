@@ -114,7 +114,7 @@ $( document ).ready(function() //get the DOM ready
         $('#elem-desc').text(desc);  //puts in the description for the element
     }      
     );
-    $("#modal").on("click",function(){               //Clicking the black space outside the modal closes it and brings back the periodic table
+    $("#modal").on("click",function(){               //Clicking the black space outside the modal closes it and brings back the description text
         $('#modal').css('visibility','hidden');
         $('.lanel').css('visibility','visible');
         $('.actel').css('visibility','visible');
@@ -122,6 +122,4 @@ $( document ).ready(function() //get the DOM ready
     }).children().on('click', function (event) {     //Two chained click events. Clicking the text/the modal itself does NOT close it, so
         event.stopPropagation();                     //the information can still be easily right clicked/selected.
     });
-
-    $('#elm-container').slideOut(1000);
     });
