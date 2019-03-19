@@ -119,7 +119,9 @@ $( document ).ready(function() //get the DOM ready
         $('.lanel').css('visibility','visible');
         $('.actel').css('visibility','visible');
         $('#elm-container').css('visibility','visible');
-    }).children().on('click', function (event) {     //Clicking the text/the modal itself does NOT close it, so
+    }).children().on('click', function (event) {     //Two chained click events. Clicking the text/the modal itself does NOT close it, so
         event.stopPropagation();                     //the information can still be easily right clicked/selected.
     });
+
+    $('#elm-container').slideOut(1000);
     });

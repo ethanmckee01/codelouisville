@@ -7,7 +7,7 @@
         width: 100%; 
         height: 100%;
         margin: 0;
-        visibility: hidden;
+        visibility: visible;
         background-color:rgba(0,0,0,0.7);  
         flex-direction: row;            
         position: fixed;
@@ -26,8 +26,15 @@
         min-height: 60%;
         flex-shrink: 0;
         text-align: left;
-        font-size: .8em;
+        font-size: 1.6em;
         cursor:auto;
+    }
+    @media screen and (min-width: 768px)
+    {
+        #elem-desc
+        {
+            font-size: 1.9em;
+        } 
     }
  @media screen and (min-width: 1200px)
     {
@@ -41,7 +48,7 @@
             min-width: 400px;
             min-height: 500px;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.3em;
         } 
     }
     /* Modal END*/
@@ -49,6 +56,7 @@
     body 
     {
         margin: 0;       /* Getting rid of body's default margins so the modal translucence covers viewport completely*/
+        background-color: #393e41;
     }
     #elm-container
     {
@@ -139,7 +147,9 @@
     {
         border-width: 3px 0px 0px 3px;
     }
-}                                                  /* End of media query*/
+}                                                  /* End of media query 1*/
+
+
 
     .lanel
     {
@@ -172,4 +182,5 @@
         max-width: 1200px; 
         margin: 0 auto; 
         min-height: 100%;
+        background-color: #393e41;
     }
